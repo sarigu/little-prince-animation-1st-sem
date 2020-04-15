@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+
+body {
+    background-size: 1024px 768px;
+    background-repeat: no-repeat;
+    margin-left: 258px;
+}
+
+p {
+    position: absolute;
+    width: 1024px;
+    height: 30px;
+    margin-top: 700px;
+    text-align: center;
+    color: white;
+    font-size: 23px;
+}
+
+/*Animating opening screen*/
+#start {
+    background-image: url(startback.png);
+    background-position: 250px 0px;
+    position: relative;
+}
+
+#star1 {
+    opacity: 0;
+    position: absolute;
+    margin-top: -100px;
+    animation-name: fadeout;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+#star2 {
+    opacity: 0;
+    position: absolute;
+    margin-left: 150px;
+    animation-name: fadeout;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+#star3 {
+    opacity: 0;
+    position: absolute;
+    margin-left: 350px;
+    margin-top: -300px;
+    animation-name: fadeout;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+#star4 {
+    opacity: 0;
+    position: absolute;
+    margin-left: 650px;
+    margin-top: -200px;
+    animation-name: fadeout;
+    animation-duration: 3s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+#star5 {
+    opacity: 0;
+    position: absolute;
+    margin-left: 850px;
+    margin-top: -80px;
+    animation-name: fadeout;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+#startBtn {
+    position: absolute;
+    opacity: 0;
+    width: 120px;
+    margin-top: 500px;
+    margin-left: 450px;
+    animation-name: fadeout;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+    to {
+        opacity: 1;
+    }
+}
+
+svg {
+    opacity: 0.9;
+    position: absolute;
+    margin-top: 250px;
+    margin-left: 200px;
+    width: 600px;
+    fill: none;
+    stroke: white;
+    stroke-width: 4;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+}
+
+.cls-1 {
+    animation: draw 4s forwards;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/*Main screen*/
+
+#main {
+    background-image: url(background1.png);
+    background-position: 250px 0px;
+    position: relative;
+}
+
+#fish1 {
+    width: 90px;
+    position: absolute;
+    margin-left: 910px;
+    opacity: 0;
+}
+
+#fish1OtherSide {
+    width: 90px;
+    position: absolute;
+    opacity: 0;
+}
+
+
+#fish2 {
+    width: 70px;
+    position: absolute;
+    margin-top: 200px;
+    opacity: 0;
+}
+
+#fish2OtherSide {
+    width: 70px;
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 940px;
+    opacity: 0;
+}
+
+#roses {
+    width: 130px;
+    position: absolute;
+    margin-top: 610px;
+    margin-left: 500px;
+}
+
+#moon {
+    width: 40px;
+    position: absolute;
+    margin-left: 750px;
+    margin-top: 420px;
+    z-index: 1;
+}
+
+#tree {
+    position: absolute;
+    width: 377px;
+    margin-top: 290px;
+    margin-left: 595px;
+}
+
+#bird {
+    position: absolute;
+    width: 5vw;
+    margin-left: 700px;
+    margin-top: 330px;
+    filter: drop-shadow(0 0 1rem white);
+}
+
+#star {
+    position: absolute;
+    width: 250px;
+    overflow: hidden;
+    margin-left: 250px;
+    margin-top: -10px;
+}
+
+#star img {
+    width: 2232px;
+    height: 450px;
+}
+
+.shaking {
+    animation: shakes 1.5s steps(8);
+    animation-iteration-count: 4;
+    animation-direction: alternate;
+}
+
+@keyframes shakes {
+    to {
+        transform: translateX(-2000px);
+    }
+}
+
+#prince {
+    width: 130px;
+    position: absolute;
+    margin-top: 490px;
+}
+
+#fox {
+    display: none;
+    position: absolute;
+    width: 200px;
+    margin-top: 600px;
+    margin-left: 750px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.glow {
+    filter: drop-shadow(0 0 1rem #ff8913);
+}
+
+.glowFox{
+    filter: drop-shadow(0 0 1rem #ff82e4);
+}
+
+.zoom {
+    animation-name: zoom;
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+}
+
+@keyframes zoom {
+    to {
+        width: 180px;
+    }
+}
+
+.flying {
+    animation: flying 10s linear;
+    animation-fill-mode: forwards;
+}
+
+/*FISH 1 FLYING SIDE TO SIDE*/
+@keyframes flying {
+    0% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-910px);
+        opacity: 1;
+    }
+
+    /* goes 1000px to the left side from the current position*/
+}
+
+.oppositeDirection {
+    animation: oppositeDirection 8s linear;
+}
+
+@keyframes oppositeDirection {
+    0% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(920px);
+        opacity: 1;
+    }
+}
+
+/*FISH 2 FLYING LEFT TO RIGHT*/
+.flying2 {
+    animation: flying2 12s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flying2 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(920px);
+        opacity: 1;
+    }
+}
+
+.oppositeDirection2 {
+    animation: oppositeDirection2 10s linear;
+}
+
+@keyframes oppositeDirection2 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-920px);
+        opacity: 1;
+    }
+}
+
+
+.moving {
+    animation: movesToRight 5s linear;
+}
+
+@keyframes movesToRight {
+    to {
+        margin-left: 420px;
+    }
+}
+
+.princePos {
+    margin-left: 420px;
+}
+
+.backAndForth {
+    animation-name: backAndForth;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+}
+
+@keyframes backAndForth {
+    0% {
+        margin-left: 420px;
+    }
+
+    30% {
+        margin-left: 640px;
+    }
+
+    100% {
+        margin-left: 10px;
+    }
+}
+
+
+.fading {
+    animation: fadeOut 3s ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.princeShake {
+    animation-name: princeShake;
+    animation-duration: 0.2s;
+    animation-iteration-count: 4;
+    animation-direction: alternate;
+}
+
+
+@keyframes princeShake {
+    0% {
+        transform: rotate(3deg);
+    }
+
+    20% {
+        transform: rotate(-3deg);
+    }
+
+    40% {
+        transform: rotate(3deg);
+    }
+
+    60% {
+        transform: rotate(-3deg);
+    }
+
+    100% {
+        transform: rotate(3deg);
+    }
+}
+
+/*Fox moves left towrds the prinde*/
+.moveLeft {
+    animation: moveLeft 1s linear;
+}
+
+@keyframes moveLeft {
+    to {
+        margin-left: 540px;
+    }
+}
+
+.moveTogether{
+    animation: moveTogether 2s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveTogether{
+    to{
+        transform: translateX(300px);
+        opacity: 0;
+    }
+}
+
+.falling {
+    animation: falls 1s ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes falls {
+    to {
+        margin-top: 650px;
+        transform: rotate(45deg);
+    }
+}
+
+.fliesAway {
+    animation: flies 2s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flies {
+    99% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-800px, -250px);
+        opacity: 0;
+    }
+}
+
+/*TRANSITION SCREEN WITH DOTS*/
+
+#transitionScreen {
+    background-image: url(startback.png);
+    background-position: 250px 0px;
+}
+
+#threeDots {
+    margin-left: 300px;
+    margin-top: 350px;
+}
+
+#transitionScreen img {
+    width: 100px;
+    padding: 20px;
+}
+
+#dot1 {
+    opacity: 0;
+    animation-name: dotFade;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+#dot2 {
+    opacity: 0;
+    animation-name: dotFade;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.8s;
+}
+
+#dot3 {
+    opacity: 0;
+    animation-name: dotFade;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.6s;
+}
+
+@keyframes dotFade {
+    to {
+        opacity: 1;
+    }
+}
+
+/*SUNRISE SCREEN*/
+#sunriseScreen {
+    background-image: url(background1a.png);
+    background-position: 250px 0px;
+    position: relative;
+}
+
+#sun {
+    position: absolute;
+    width: 1000px;
+    overflow: hidden;
+    /*hide other parts of the sprite sheet*/
+}
+
+#sun img {
+    width: 7000px;
+    margin-top: 200px;
+    margin-left: 5px;
+}
+
+
+#princeBack {
+    position: absolute;
+    width: 120px;
+    margin-left: 400px;
+    margin-top: 350px;
+}
+
+#foxBack {
+    position: absolute;
+    width: 110px;
+    margin-left: 520px;
+    margin-top: 400px;
+}
+
+.brighter {
+    animation: bright 0.7s steps(6);
+    animation-fill-mode: forwards;
+}
+
+@keyframes bright {
+    to {
+        transform: translateX(-5999px);
+    }
+}
+
+
+/*CREDITS*/
+#end {
+    position: absolute;
+    margin-top: 570px;
+    color: white;
+    font-size: 5em;
+    opacity: 0;
+    font-family: 'Sacramento', cursive;
+}
+
+#end.fadeIn {
+    animation: end 10s linear;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes end {
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#texts {
+    position: absolute;
+    margin-top: -930px;
+    margin-left: 350px;
+    padding: 1em;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.786);
+    width: 300px;
+    color: black;
+    text-align: center;
+    font-family: 'Sacramento', cursive;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#texts.roll {
+    animation: roll 40s linear;
+}
+
+@keyframes roll {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(2200px);
+    }
+}
